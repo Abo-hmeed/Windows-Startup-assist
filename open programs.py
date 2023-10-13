@@ -7,7 +7,7 @@ def open_programs():
     if 'programs' not in os.listdir(path):
         os.mkdir('programs')
     path = path + '\\programs'
-    if len(os.listdir(path)) == 1:
+    if len(os.listdir(path)) == 0:
         os.startfile(path)
     else:
         for i in os.listdir(path):
