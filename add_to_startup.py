@@ -2,12 +2,14 @@ from sys import argv
 from shutil import copy
 from winshell import startup
 from os import listdir
+from os import path as pth
 
 
 def add_to_startup():
     opened_befor = True
-    path = sys.argv[0].replace('\\open programs.py','')
-    if 'done.txt' not in os.listdir(path):
+    file_name = '\\'+pth.basename(argv[0])
+    path = argv[0].replace(file_name,'')
+    if 'done.txt' not in listdir(path):
         file = open('done.txt', 'x')
     else:
         file = open('done.txt', 'r')
