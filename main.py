@@ -7,3 +7,5 @@ import open_programs as op
 
 gs.greetUser(ats.add_to_startup())
 choice = mm.mainMenu()
+
+op.open_programs()
